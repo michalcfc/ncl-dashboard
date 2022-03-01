@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "vercel dev",
+    "deploy" : "vercel deploy --prod",
     "start:dev": "webpack-cli serve --mode=development --env development --open --hot",
     "build": "webpack --mode=production --env production --progress",
     "lint": "eslint './src/**/*.{ts,tsx}'",
@@ -81,6 +83,7 @@
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.1.1",
     "styled-map": "^3.3.0",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "vercel": "^24.0.0"
   }
 }

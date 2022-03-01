@@ -1,0 +1,16 @@
+export const FONT_SIZES = {
+  default: '1rem',
+  h1: '1.8rem',
+  h2: '1.6rem',
+  h3: '1.4rem',
+  h4: '1.2rem',
+  h5: '0.975rem',
+  h6: '0.75rem',
+  p: '1rem',
+  xs: '0.75rem',
+  sm: '0.875rem',
+  md: '1rem',
+  lg: '1.2rem',
+  xl: '1.5rem',
+  xxl: '2.4rem',
+};

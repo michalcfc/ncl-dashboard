@@ -1,0 +1,899 @@
+{
+  "reservations": {
+    "inboxOwner": "host",
+    "conversations": [
+      {
+        "inboxOwner": "host",
+        "id": "469783",
+        "context": {
+          "id": "413394",
+          "reservationOrderId": false,
+          "inquiryId": "413394",
+          "type": "inquiry",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-12-31",
+          "dateTo": "2022-01-02",
+          "nbAdults": "16",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Zapytanie",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": {
+            "accept": false,
+            "reject": false,
+            "replace": true,
+            "reply": true
+          },
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "2021-11-21 13:36",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "2 noce",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "sender": "guest",
+            "type": "HostAcceptMessage",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Danuta",
+          "name": "Danuta K.",
+          "fullName": "Danuta Kik",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-11-21 13:36",
+        "firstMessageTime": "2021-11-21 13:24",
+        "previewUrl": "/inbox/469783/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "459262",
+        "context": {
+          "id": "61044",
+          "reservationOrderId": false,
+          "inquiryId": "61044",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-10-20",
+          "dateTo": "2021-10-22",
+          "nbAdults": "2",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "360 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Prośba o rezerwację",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "2 noce",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Marta",
+          "name": "Marta B.",
+          "fullName": "Marta Bojczuk",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-10-07 20:43",
+        "firstMessageTime": "2021-10-07 17:37",
+        "previewUrl": "/inbox/459262/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "459256",
+        "context": {
+          "id": "404802",
+          "reservationOrderId": false,
+          "inquiryId": "404802",
+          "type": "inquiry",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-10-23",
+          "dateTo": "2021-10-24",
+          "nbAdults": "2",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Zapytanie",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": {
+            "accept": false,
+            "reject": false,
+            "replace": true,
+            "reply": true
+          },
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "2021-10-07 19:26",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "type": "HostAcceptMessage",
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Marta",
+          "name": "Marta B.",
+          "fullName": "Marta Bojczuk",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-10-07 19:26",
+        "firstMessageTime": "2021-10-07 17:14",
+        "previewUrl": "/inbox/459256/preview",
+        "isHostRead": true,
+        "isGuestRead": true
+      },
+      {
+        "inboxOwner": "host",
+        "id": "459254",
+        "context": {
+          "id": "61042",
+          "reservationOrderId": false,
+          "inquiryId": "61042",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-10-09",
+          "dateTo": "2021-10-10",
+          "nbAdults": "1",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "115 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Prośba o rezerwację",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Magdalena",
+          "name": "Magdalena K.",
+          "fullName": "Magdalena Karaś",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-10-08 07:39",
+        "firstMessageTime": "2021-10-07 16:37",
+        "previewUrl": "/inbox/459254/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "458791",
+        "context": {
+          "id": "60967",
+          "reservationOrderId": false,
+          "inquiryId": "60967",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-10-08",
+          "dateTo": "2021-10-09",
+          "nbAdults": "1",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "115 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "paid",
+          "statusName": "Rezerwacja",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "2021-10-04 19:17",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ],
+          "name": "Marcin Palczynski",
+          "surname": ""
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Marcin",
+          "name": "Marcin P.",
+          "fullName": "Marcin Palczynski",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Opłacona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-10-07 16:10",
+        "firstMessageTime": "2021-10-04 18:37",
+        "previewUrl": "/inbox/458791/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "456751",
+        "context": {
+          "id": "60482",
+          "reservationOrderId": false,
+          "inquiryId": "60482",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-09-24",
+          "dateTo": "2021-09-25",
+          "nbAdults": "2",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "145 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected_by_user",
+          "statusName": "Rezerwacja",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "2021-09-21 15:24",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Aleksandra",
+          "name": "Aleksandra D.",
+          "fullName": "Aleksandra Dębska",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odwołana",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-09-21 16:37",
+        "firstMessageTime": "2021-09-21 11:09",
+        "previewUrl": "/inbox/456751/preview",
+        "isHostRead": true,
+        "isGuestRead": true
+      },
+      {
+        "inboxOwner": "host",
+        "id": "455716",
+        "context": {
+          "id": "60231",
+          "reservationOrderId": false,
+          "inquiryId": "60231",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-09-18",
+          "dateTo": "2021-09-19",
+          "nbAdults": "4",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "280 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Prośba o rezerwację",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Karolina",
+          "name": "Karolina P.",
+          "fullName": "Karolina Przybył",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-09-14 21:30",
+        "firstMessageTime": "2021-09-14 21:14",
+        "previewUrl": "/inbox/455716/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "454321",
+        "context": {
+          "id": "59911",
+          "reservationOrderId": false,
+          "inquiryId": "59911",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-09-11",
+          "dateTo": "2021-09-12",
+          "nbAdults": "2",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "115 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Prośba o rezerwację",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Lidia",
+          "name": "Lidia K.",
+          "fullName": "Lidia Kałuża",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-09-09 06:53",
+        "firstMessageTime": "2021-09-09 06:44",
+        "previewUrl": "/inbox/454321/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "454075",
+        "context": {
+          "id": "59853",
+          "reservationOrderId": false,
+          "inquiryId": "59853",
+          "type": "reservationOrder",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-09-10",
+          "dateTo": "2021-09-12",
+          "nbAdults": "2",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "230 PLN",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Prośba o rezerwację",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": [
+
+          ],
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "2 noce",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Lidia",
+          "name": "Lidia K.",
+          "fullName": "Lidia Kałuża",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-09-08 13:00",
+        "firstMessageTime": "2021-09-08 12:38",
+        "previewUrl": "/inbox/454075/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      },
+      {
+        "inboxOwner": "host",
+        "id": "451297",
+        "context": {
+          "id": "398506",
+          "reservationOrderId": false,
+          "inquiryId": "398506",
+          "type": "inquiry",
+          "email": "",
+          "phone": "",
+          "orderNumber": "",
+          "dateFrom": "2021-08-28",
+          "dateTo": "2021-08-29",
+          "nbAdults": "2",
+          "nbChildren": "0",
+          "childrenAges": [
+
+          ],
+          "totalPrice": "",
+          "totalPriceDiscounted": "",
+          "totalPriceValue": "",
+          "totalPriceDiscountedValue": "",
+          "status": "rejected",
+          "statusName": "Zapytanie",
+          "paymentStatus": "",
+          "paymentUrl": "",
+          "prepaymentValue": "",
+          "prepaymentValueDiscounted": "",
+          "prepaymentValuePrice": "",
+          "prepaymentValuePriceDiscounted": "",
+          "prepaymentValueCurrency": "",
+          "prepaymentValuePercentage": "",
+          "prepaymentHoursToPay": "",
+          "payoffAmount": "",
+          "hostActions": {
+            "accept": false,
+            "reject": false,
+            "replace": true,
+            "reply": true
+          },
+          "hostActionsTimeout": "",
+          "guestActions": [
+
+          ],
+          "orderItems": null,
+          "guestActionsTimeout": "",
+          "rejectedAt": "2021-08-27 22:15",
+          "acceptedAt": "",
+          "paidAt": "",
+          "daysBetweenTermText": "1 noc",
+          "isRefundableDeposit": false,
+          "isActiveFreeCancellation": false,
+          "isPaidoff": false,
+          "isUseGovernmentVoucher": false,
+          "stayPackage": [
+
+          ]
+        },
+        "messages": [
+          {
+            "id": 1,
+            "type": "HostAcceptMessage",
+            "sender": "guest",
+            "text": "Can I ask something?"
+          },
+          {
+            "id": 2,
+            "type": "HostAcceptMessage",
+            "sender": "host",
+            "text": "Definately. We are happy to help you."
+          }
+        ],
+        "host": {
+          "offerId": "9223",
+          "name": "Leśny Zakątek"
+        },
+        "guest": {
+          "firstName": "Edyta",
+          "name": "Edyta K.",
+          "fullName": "Edyta K",
+          "addedAt": "",
+          "unreadLastMessage": false
+        },
+        "statusName": "Odrzucona",
+        "isConfirmedStay": false,
+        "lastMessageTime": "2021-08-27 22:15",
+        "firstMessageTime": "2021-08-27 20:38",
+        "previewUrl": "/inbox/451297/preview",
+        "isHostRead": true,
+        "isGuestRead": false
+      }
+    ]
+  }
+}

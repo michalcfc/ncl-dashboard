@@ -8,7 +8,9 @@
     "build": "webpack --mode=production --env production --progress",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,6 @@
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.9.0",
     "@openapitools/openapi-generator-cli": "^2.3.7",
-    "@storybook/addon-actions": "^6.4.12",
-    "@storybook/addon-essentials": "^6.4.12",
-    "@storybook/addon-links": "^6.4.12",
-    "@storybook/react": "^6.4.12",
     "@types/jest": "^26.0.23",
     "@types/node": "16.11.19",
     "@types/react": "17.0.38",
@@ -57,12 +55,8 @@
     "webpack-dev-server": "4.7.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-common-types": "^0.2.36",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.16",
-    "@heroicons/react": "^1.0.5",
+    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/react-fontawesome": "^0.1.17",
     "@types/react-router": "^5.1.17",
     "@types/react-router-dom": "^5.3.2",
     "axios": "^0.24.0",
@@ -79,7 +73,6 @@
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.1.1",
     "styled-map": "^3.3.0",
-    "styled-system": "^5.1.5",
-    "vercel": "^24.0.0"
+    "styled-system": "^5.1.5"
   }
 }

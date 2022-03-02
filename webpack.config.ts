@@ -1,5 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
 
 const SRC_DIR = path.resolve(__dirname, "..", "src");
@@ -45,6 +46,14 @@ module.exports.default = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             filename: "index.html",
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: "public",
+                    to: BUILD_DIR,
+                },
+            ],
         }),
     ],
 };

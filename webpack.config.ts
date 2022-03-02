@@ -1,6 +1,5 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import CopyWebpackPlugin from "copy-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
 
 const SRC_DIR = path.resolve(__dirname, "..", "src");
@@ -30,9 +29,12 @@ module.exports.default = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|jpe?g|gif|eot|woff|ttf|ico)$/i,
-                use: ["file-loader?&name=[hash].[ext]"],
-            },
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '/public/img/[name].[ext]'
+                }
+            }
         ],
     },
     resolve: {
@@ -46,14 +48,6 @@ module.exports.default = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             filename: "index.html",
-        }),
-        new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: "public",
-                    to: BUILD_DIR,
-                },
-            ],
         }),
     ],
 };

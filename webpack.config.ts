@@ -55,7 +55,7 @@ module.exports.default = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: "public",
+                    from: "public/img",
                     to: path.join(__dirname, "/build"),
                 },
             ],

@@ -39,6 +39,9 @@ module.exports.default = {
         extensions: [".ts", ".tsx", ".js", ".json"],
         plugins: [new TsconfigPathsPlugin()]
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",

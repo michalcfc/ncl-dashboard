@@ -2,13 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.ts",
+      "src": "./src/index.tsx"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/index.ts"
+      "dest": "/"
     }
   ]
 }

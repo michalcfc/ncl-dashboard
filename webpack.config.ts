@@ -10,8 +10,9 @@ const ENV_FILE = process.env.ENV_FILE;
 module.exports.default = {
     entry: "./src/index.tsx",
     output: {
-        path: BUILD_DIR,
-        publicPath: "/",
+        path: path.join(__dirname, "/build"),
+        filename: "build.js",
+        publicPath: '/'
     },
     module: {
         rules: [

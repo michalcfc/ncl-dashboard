@@ -9,10 +9,12 @@ const PUBLIC_DIR = path.resolve(__dirname, "..", "public");
 const ENV_FILE = process.env.ENV_FILE;
 
 module.exports.default = {
+    entry: "./src/index.tsx",
     output: {
         path: path.join(__dirname, "/build"),
         filename: "build.js",
         publicPath: '/',
+        sourceMapFilename: "[file].map",
     },
     module: {
         rules: [
@@ -29,19 +31,27 @@ module.exports.default = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|jpe?g|gif|eot|woff|ttf|ico)$/i,
-                use: ["file-loader?&name=[hash].[ext]"],
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
             },
         ],
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
-        plugins: [new TsconfigPathsPlugin()],
+        plugins: [new TsconfigPathsPlugin()]
     },
     devServer: {
         historyApiFallback: true,
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: "./public/index.html",
+            filename: "index.html",
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {

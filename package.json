@@ -2,7 +2,7 @@
   "name": "hello-react",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.tsx",
+  "homepage": ".",
   "scripts": {
     "start:dev": "webpack-cli serve --mode=development --env development --open --hot",
     "build": "webpack --mode=production --env production --progress",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/michalcfc/react-dashboard.git"
+    "url": "git+ssh://git@github.com/michalcfc/ncl-dashboard"
   },
   "author": "michal",
   "license": "ISC",

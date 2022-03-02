@@ -1,20 +1,19 @@
 import path from "path";
-import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
 
-const webpackConfig = (env): Configuration => ({
+const SRC_DIR = path.resolve(__dirname, "..", "src");
+const BUILD_DIR = path.resolve(__dirname, "..", "build");
+const PUBLIC_DIR = path.resolve(__dirname, "..", "public");
+const ENV_FILE = process.env.ENV_FILE;
+
+module.exports.default = {
     entry: "./src/index.tsx",
-    ...(env.production || !env.development ? {} : {devtool: "eval-source-map"}),
-    resolve: {
-        extensions: [".ts", ".tsx", ".js"],
-        plugins: [new TsconfigPathsPlugin()]
-    },
     output: {
-        path: path.join(__dirname, "/dist"),
-        filename: "build.js",
-        publicPath: '/'
+        path: BUILD_DIR,
+        publicPath: "/",
+        filename: "[name].[contenthash].js",
+        sourceMapFilename: "[file].map",
     },
     module: {
         rules: [
@@ -34,26 +33,20 @@ const webpackConfig = (env): Configuration => ({
                 test: /\.(png|jpe?g|gif|eot|woff|ttf|ico)$/i,
                 use: ["file-loader?&name=[hash].[ext]"],
             },
-        ]
+        ],
     },
-    devServer: {
-        historyApiFallback: true,
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".json"],
+        plugins: [new TsconfigPathsPlugin()]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./public/index.html"
+            template: "./public/index.html",
+            filename: "index.html",
         }),
-        new webpack.DefinePlugin({
-            "process.env.PRODUCTION": env.production || !env.development,
-            "process.env.NAME": JSON.stringify(require("./package.json").name),
-            "process.env.VERSION": JSON.stringify(require("./package.json").version)
-        }),
-        new ForkTsCheckerWebpackPlugin({
-            eslint: {
-                files: "./src/**/*.{ts,tsx,js,jsx}" // required - same as command `eslint ./src/**/*.{ts,tsx,js,jsx} --ext .ts,.tsx,.js,.jsx`
-            }
-        })
-    ]
-});
+    ],
+};
 
-export default webpackConfig;
+module.exports.SRC_DIR = SRC_DIR;
+module.exports.BUILD_DIR = BUILD_DIR;
+module.exports.PUBLIC_DIR = PUBLIC_DIR;

@@ -2,7 +2,7 @@
   "name": "hello-react",
   "version": "1.0.0",
   "description": "",
-  "homepage": ".",
+  "main": "index.js",
   "scripts": {
     "start:dev": "webpack-cli serve --mode=development --env development --open --hot",
     "build": "webpack --mode=production --env production --progress",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/michalcfc/ncl-dashboard"
+    "url": "git+ssh://git@github.com/michalcfc/react-dashboard.git"
   },
   "author": "michal",
   "license": "ISC",
@@ -24,9 +24,9 @@
   "homepage": "https://github.com/michalcfc/react-dashboard#readme",
   "devDependencies": {
     "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-react": "^7.13.13",
-    "@babel/preset-typescript": "^7.9.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "@openapitools/openapi-generator-cli": "^2.3.7",
     "@types/jest": "^26.0.23",
     "@types/node": "16.11.19",
@@ -71,6 +71,7 @@
     "polished": "^4.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.1.1",

@@ -12,8 +12,6 @@ module.exports.default = {
     output: {
         path: BUILD_DIR,
         publicPath: "/",
-        filename: "[name].[contenthash].js",
-        sourceMapFilename: "[file].map",
     },
     module: {
         rules: [
@@ -23,7 +21,7 @@ module.exports.default = {
                 options: {
                     transpileOnly: true
                 },
-                exclude: /dist/
+                exclude: /node_modules/,
             },
             {
                 test: /\.css$/,

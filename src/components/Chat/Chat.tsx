@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { getCurrentConversationId } from '@components/Chat/helpers';
 import { ChatProps } from './Chat.d';
 
 import { ChatAsideLeft } from './ChatAsideLeft';
@@ -12,6 +13,7 @@ const Chat: React.FC<ChatProps> = ({
   conversations,
 }) => {
   const [currentConversation, setCurrentConversation] = useState<number>(0);
+  const conversation = getCurrentConversationId(conversations, currentConversation);
 
   return (
     <ChatWindow
@@ -23,14 +25,14 @@ const Chat: React.FC<ChatProps> = ({
         setCurrentConversation={setCurrentConversation}
       />
       <ChatMain
-        users={conversations[currentConversation].guest}
-        messages={conversations[currentConversation].messages}
+        users={conversation?.guest}
+        messages={conversation?.messages}
         writeText={null}
         addMessage={null}
         currentConversation={currentConversation}
       />
       <ChatAsideRight
-        conversationDetails={conversations[currentConversation].context}
+        conversationDetails={conversation?.context}
       />
     </ChatWindow>
   );

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoint from '@utils/styles/breakpoints';
 
 type DataProps = {
   isScrolled?: boolean
@@ -18,5 +19,8 @@ export const HeaderContent = styled.div<DataProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: ${({ theme }) => `0 ${theme.spacing.lg}`}
+  padding: ${({ theme }) => `0 ${theme.spacing.sm}`};
+  @media ${breakpoint.device.lg} {
+    padding: ${({ theme }) => `0 ${theme.spacing.md}`};
+  }
 `;

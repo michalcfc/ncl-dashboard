@@ -44,7 +44,7 @@ export const AsideCloseButton = styled(Button)<DataProps>`
   color: ${({ theme }) => theme.colors.gray};
   background: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.boxShadows.default};
-  box-shadow:   ${({ theme }) => theme.boxShadows.default};
+  box-shadow: ${({ theme }) => theme.boxShadows.default};
   visibility: ${({ isVisible }) => (isVisible ? 'visible' : 'hidden')};
 `;
 

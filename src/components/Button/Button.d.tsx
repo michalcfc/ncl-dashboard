@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   SpaceProps,
@@ -28,6 +28,7 @@ export type ButtonProps =
     BorderProps &
     PositionProps &
     CustomProps &
+    ButtonHTMLAttributes<HTMLButtonElement> &
     Pick<
     CSSProperties,
     | 'textDecoration'

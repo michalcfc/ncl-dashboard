@@ -17,7 +17,7 @@ const ConversationsList: React.FC<ConversationsListProps> = ({
           key={conversation.id}
           userAvatar=""
           userName={conversation.guest.name}
-          conversationId={(Number(conversation.id) - 1)}
+          conversationId={(Number(conversation.id))}
           setCurrentConversation={setCurrentConversation}
           lastMessage={getLastConversationMessage(conversation.messages)}
         />

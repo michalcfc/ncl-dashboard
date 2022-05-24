@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { mapToTheme as theme } from 'styled-map';
 
 type DataProps = {
-  variant?: string
+  variant?: 'success' | 'warning' | 'danger' | 'info'
 };
 
 export const AlertWrapper = styled.div<DataProps>`

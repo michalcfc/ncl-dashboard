@@ -6,6 +6,7 @@ type DataProps = {
   | 'withAsides'
   | 'withLeftAside'
   | 'withRightAside'
+
 };
 
 const switchTheme = ({ view }) => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Box } from '@components/Box';
 import { BORDER_RADIUS } from '@utils/styles/borderRadius';
@@ -19,9 +20,9 @@ const ConversationsItem: React.FC<ConversationsItemProps> = ({
   lastMessage,
   setCurrentConversation,
 }) => {
+  const navigate = useNavigate();
   const fullName = userName.split(' ');
   const initials = fullName.shift().charAt(0) + fullName.pop().charAt(0);
-
   return (
 
     <ConversationsItemWrapper>
@@ -29,7 +30,10 @@ const ConversationsItem: React.FC<ConversationsItemProps> = ({
         size="xs"
         width="100%"
         variant="ghost"
-        onClick={() => setCurrentConversation(conversationId)}
+        onClick={() => {
+          setCurrentConversation(conversationId);
+          navigate(`/reservations/${conversationId}`);
+        }}
       >
         <Box
           hoverEffect

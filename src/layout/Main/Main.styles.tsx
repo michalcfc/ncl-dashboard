@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoint from '@utils/styles/breakpoints';
 
 export const MainWrapper = styled.main`
   display: grid;
@@ -7,5 +8,8 @@ export const MainWrapper = styled.main`
 
 export const MainContainer = styled.div`
   height: 100%;
-  padding: ${({ theme }) => `0 ${theme.spacing.lg} 0`};
+  padding: ${({ theme }) => `0 ${theme.spacing.sm}`};
+  @media ${breakpoint.device.lg} {
+    padding: ${({ theme }) => `0 ${theme.spacing.md}`};
+  }
 `;

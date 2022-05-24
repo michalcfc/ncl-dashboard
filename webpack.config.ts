@@ -1,20 +1,20 @@
 import path from "path";
+import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
 
-const SRC_DIR = path.resolve(__dirname, "..", "src");
-const BUILD_DIR = path.resolve(__dirname, "..", "build");
-const PUBLIC_DIR = path.resolve(__dirname, "..", "public");
-const ENV_FILE = process.env.ENV_FILE;
-
-module.exports.default = {
+const webpackConfig = (env): Configuration => ({
     entry: "./src/index.tsx",
+    ...(env.production || !env.development ? {} : {devtool: "eval-source-map"}),
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"],
+        plugins: [new TsconfigPathsPlugin()]
+    },
     output: {
-        path: path.join(__dirname, "/build"),
+        path: path.join(__dirname, "/dist"),
         filename: "build.js",
-        publicPath: '/',
-        sourceMapFilename: "[file].map",
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -24,45 +24,38 @@ module.exports.default = {
                 options: {
                     transpileOnly: true
                 },
-                exclude: /node_modules/,
+                exclude: /dist/
             },
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
+                test: /\.(png|jpe?g|gif|eot|woff|ttf|ico)$/i,
+                use: ["file-loader?&name=[hash].[ext]"],
             },
-        ],
-    },
-    resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"],
-        plugins: [new TsconfigPathsPlugin()]
+        ]
     },
     devServer: {
         historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./public/index.html",
-            filename: "index.html",
+            template: "./public/index.html"
         }),
-        new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: "public/img",
-                    to: path.join(__dirname, "/build"),
-                },
-            ],
+        new webpack.DefinePlugin({
+            "process.env.PRODUCTION": env.production || !env.development,
+            "process.env.NAME": JSON.stringify(require("./package.json").name),
+            "process.env.VERSION": JSON.stringify(require("./package.json").version),
+            'process.env.API_URL': JSON.stringify(process.env.API_URL),
+            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL)
         }),
-    ],
-};
+        new ForkTsCheckerWebpackPlugin({
+            eslint: {
+                files: "./src/**/*.{ts,tsx,js,jsx}" // required - same as command `eslint ./src/**/*.{ts,tsx,js,jsx} --ext .ts,.tsx,.js,.jsx`
+            }
+        })
+    ]
+});
 
-module.exports.SRC_DIR = SRC_DIR;
-module.exports.BUILD_DIR = BUILD_DIR;
-module.exports.PUBLIC_DIR = PUBLIC_DIR;
+export default webpackConfig;

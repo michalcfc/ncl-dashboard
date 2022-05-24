@@ -11,7 +11,7 @@ export const TooltipWrapper = styled.div<DataProps>`
   display: inline-block;
 `;
 
-export const TooltipContent = styled.span<DataProps>`
+export const TooltipContent = styled.div<DataProps>`
   position: fixed;
   transform: translate(-50%, 10%);
   width: 252px;

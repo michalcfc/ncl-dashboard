@@ -9,7 +9,7 @@ const MessageList: React.FC<MessageListProps> = ({
   messages,
 }) => (
   <MessageListStyle>
-    {messages.map((message) => (
+    {messages?.map((message) => (
       <Fragment key={message.id}>
         <MessageBox
           message={message.text}

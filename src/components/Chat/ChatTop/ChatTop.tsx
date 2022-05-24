@@ -34,7 +34,7 @@ const ChatTop: React.FC<ChatTopProps> = ({
           fontSize={FONT_SIZES.sm}
           fontWeight={FONT_WEIGHTS.bold}
         >
-          {users.name}
+          {users?.name}
         </Text>
         <Text
           muted
@@ -42,7 +42,7 @@ const ChatTop: React.FC<ChatTopProps> = ({
         >
           Last seen:
           {' '}
-          {users.firstName}
+          {users?.firstName}
         </Text>
       </Box>
     </Box>

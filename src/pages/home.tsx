@@ -50,7 +50,6 @@ const Home: React.FC = () => {
                 text="Hey, Don't forget to update your calendar"
               />
               <Text
-                as="p"
                 muted
                 mt={SPACING.md}
                 text="Hurry up! Season 2022 is coming. "

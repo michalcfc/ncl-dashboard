@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@components/Link';
+import breakpoint from '@utils/styles/breakpoints';
 
 import { space, SpaceProps } from 'styled-system';
 
@@ -15,9 +16,11 @@ export const NavWrapper = styled.div<NavbarProps>`
 `;
 
 export const NavItems = styled.ul<NavbarProps>`
-  padding: ${({ theme }) => `0 ${theme.spacing.md}`};
   display: ${({ isHorizontal }) => isHorizontal && 'flex'};
   align-items: ${({ isHorizontal }) => isHorizontal && 'center'};
+  @media ${breakpoint.device.lg} {
+    padding: ${({ theme }) => `0 ${theme.spacing.md}`};
+  }
 `;
 
 export const NavItem = styled.li<NavbarProps>`

@@ -14,23 +14,20 @@ const Avatar: React.FC<Props> = ({
   uri,
   size,
   ...rest
-}) => {
-  console.log(uri);
-  return (
-    <AvatarWrapper size={size} {...rest}>
-      {uri ? (
-        <AvatarImg
-          src={uri}
-          alt={alt}
-        />
-      ) : (
-        <AvatarDefault>
-          {alt}
-        </AvatarDefault>
-      )}
-    </AvatarWrapper>
+}) => (
+  <AvatarWrapper size={size} {...rest}>
+    {uri ? (
+      <AvatarImg
+        src={uri}
+        alt={alt}
+      />
+    ) : (
+      <AvatarDefault>
+        {alt}
+      </AvatarDefault>
+    )}
+  </AvatarWrapper>
 
-  );
-};
+);
 
 export default Avatar;

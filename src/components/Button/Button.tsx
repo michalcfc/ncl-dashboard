@@ -22,7 +22,9 @@ const Button: React.FC<Props> = ({
   ...rest
 }) => (
   <ButtonWrapper
-    size={variant === 'link' ? 'link' : size}
+    size={variant === 'link'
+      ? 'link'
+      : size}
     variant={variant}
     onClick={onClick}
     onMouseLeave={onMouseLeave}
@@ -34,7 +36,6 @@ const Button: React.FC<Props> = ({
       <ButtonIcon
         size="lg"
         icon={icon}
-        isName={name}
       />
     )}
   </ButtonWrapper>

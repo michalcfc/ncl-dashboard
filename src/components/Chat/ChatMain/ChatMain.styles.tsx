@@ -11,6 +11,6 @@ export const ChatMainContent = styled.div<DataProps>`
     display: flex;
     height: 100%;
     flex-direction: column;
+    border-radius: ${({ theme }) => theme.borderRadius.md};
     background: ${({ theme }) => theme.colors.white};
-    box-shadow: ${({ theme }) => theme.boxShadows.sm};
 `;

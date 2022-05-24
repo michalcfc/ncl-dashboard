@@ -1,5 +1,5 @@
 export interface AlertProps {
   text: string
-  variant?: string
+  variant?: 'success' | 'warning' | 'danger' | 'info'
   isShow?: boolean
 }

@@ -67,7 +67,6 @@ const ConversationsDetailsHeader: React.FC<ConversationsDetailsHeaderProps> = ()
         >
           <Text
             muted
-            as="p"
             mb={3}
           >
             Termin
@@ -78,7 +77,6 @@ const ConversationsDetailsHeader: React.FC<ConversationsDetailsHeaderProps> = ()
           </Text>
           <Text
             muted
-            as="p"
           >
             Odpowiedz w ciągu
             {' '}

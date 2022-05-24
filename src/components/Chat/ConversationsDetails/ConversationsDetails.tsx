@@ -10,60 +10,55 @@ import { ConversationsDetailsHeader } from '@components/Chat/ConversationsDetail
 import { ConversationsDetailsProps } from './ConversationsDetails.d';
 import { ConversationsDetailsWrapper } from './ConversationsDetails.styles';
 
-const ConversationsDetails: React.FC<ConversationsDetailsProps> = ({
-  conversationDetails,
-}) => {
-  console.log(conversationDetails);
-  return (
-    <ConversationsDetailsWrapper>
+const ConversationsDetails: React.FC<ConversationsDetailsProps> = () => (
+  <ConversationsDetailsWrapper>
 
-      <ConversationsDetailsHeader />
+    <ConversationsDetailsHeader />
 
-      <Accordion>
-        <AccordionItem>
-          <AccordionButton title="Szczegóły pobytu" />
-          <AccordionPanel>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem>
-          <AccordionButton title="Koszty pobytu" />
-          <AccordionPanel>
+    <Accordion>
+      <AccordionItem>
+        <AccordionButton title="Szczegóły pobytu" />
+        <AccordionPanel>
+          <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
+          </div>
+        </AccordionPanel>
+      </AccordionItem>
 
-        <AccordionItem>
-          <AccordionButton title="Możliwe dodatkowe opłaty" />
-          <AccordionPanel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
+      <AccordionItem>
+        <AccordionButton title="Koszty pobytu" />
+        <AccordionPanel>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionPanel>
+      </AccordionItem>
 
-        <AccordionItem>
-          <AccordionButton title="Dane kontaktowe" />
-          <AccordionPanel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-    </ConversationsDetailsWrapper>
-  );
-};
+      <AccordionItem>
+        <AccordionButton title="Możliwe dodatkowe opłaty" />
+        <AccordionPanel>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionPanel>
+      </AccordionItem>
+
+      <AccordionItem>
+        <AccordionButton title="Dane kontaktowe" />
+        <AccordionPanel>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
+  </ConversationsDetailsWrapper>
+);
 
 export default ConversationsDetails;

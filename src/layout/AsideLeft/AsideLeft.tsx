@@ -15,6 +15,7 @@ import { Link } from '@components/Link';
 import { Image } from '@components/Image';
 import { Nav } from '@layout/Nav';
 import { Box } from '@components/Box';
+import { Button } from '@components/Button';
 
 import { useWindowSize } from '@hooks/useWindowSize';
 import {
@@ -121,6 +122,12 @@ const AsideLeft: React.FC<Props> = ({
                   {hasChildren(link.children) && ''}
                 </Fragment>
               ))}
+            <Button
+              className="enable-notifications"
+              variant="success"
+              name="Enable Notifications"
+              onClick={() => {}}
+            />
           </Nav>
         </AsideContainer>
       </AsideWrapper>

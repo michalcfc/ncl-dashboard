@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+
+// utils
 import { COLORS } from '@utils/styles/colors';
 import { SPACING } from '@utils/styles/spacing';
+import { BOX_SHADOWS } from '@utils/styles/boxShadows';
 import { BORDER_RADIUS } from '@utils/styles/borderRadius';
 
 // components
-import { Grid } from '@components/Grid';
-import { Box } from '@components/Box';
-import { Text } from '@components/Text';
-import { Link } from '@components/Link';
-import { Heading } from '@components/Heading';
-import { LoginForm } from '@components/LoginForm';
-import { Image } from '@components/Image';
-import { BOX_SHADOWS } from '@utils/styles/boxShadows';
+import { Grid } from '@components/ui/Grid';
+import { Box } from '@components/ui/Box';
+import { Text } from '@components/ui/Text';
+import { Link } from '@components/ui/Link';
+import { Heading } from '@components/ui/Heading';
+import { LoginForm } from '@components/auth/LoginForm';
+import { Image } from '@components/ui/Image';
 
 const Home: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);

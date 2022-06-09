@@ -5,9 +5,9 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     textColor: string
     background: string
-    button: {
+    buttons: {
       [el: string]: {
-        [el: string]: string
+        [el: string]: any
       }
     },
     alerts: {

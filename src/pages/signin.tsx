@@ -1,6 +1,6 @@
 import React from 'react';
-import { LoginForm } from '@components/LoginForm';
-import { Heading } from '@components/Heading';
+import { LoginForm } from '@components/auth/LoginForm';
+import { Heading } from '@components/ui/Heading';
 
 const Login: React.FC = () => (
   <>

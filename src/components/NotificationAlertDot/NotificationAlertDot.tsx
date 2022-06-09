@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from '@components/Box';
+import { Box } from '@components/ui/Box';
 import { COLORS } from '@utils/styles/colors';
 import { NotificationAlertDotProps } from './NotificationAlertDot.d';
 

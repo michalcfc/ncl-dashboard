@@ -3,12 +3,17 @@ import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
+const CopyPlugin = require("copy-webpack-plugin");
+const { ServiceWorkerPlugin } = require("service-worker-webpack");
 
 const webpackConfig = (env): Configuration => ({
     entry: "./src/index.tsx",
     ...(env.production || !env.development ? {} : {devtool: "eval-source-map"}),
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
+        alias: {
+            types: path.resolve(__dirname, "src/types/")
+        },
         plugins: [new TsconfigPathsPlugin()]
     },
     output: {
@@ -24,7 +29,6 @@ const webpackConfig = (env): Configuration => ({
                 options: {
                     transpileOnly: true
                 },
-                exclude: /dist/
             },
             {
                 test: /\.css$/,
@@ -33,6 +37,7 @@ const webpackConfig = (env): Configuration => ({
             {
                 test: /\.(png|jpe?g|gif|eot|woff|ttf|ico)$/i,
                 use: ["file-loader?&name=[hash].[ext]"],
+                type: "asset/resource",
             },
         ]
     },
@@ -40,8 +45,15 @@ const webpackConfig = (env): Configuration => ({
         historyApiFallback: true,
     },
     plugins: [
+        new ServiceWorkerPlugin(),
         new HtmlWebpackPlugin({
             template: "./public/index.html"
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "public/img", to: "img" },
+                { from: 'public/manifest.json', to: 'manifest.json' },
+            ],
         }),
         new webpack.DefinePlugin({
             "process.env.PRODUCTION": env.production || !env.development,

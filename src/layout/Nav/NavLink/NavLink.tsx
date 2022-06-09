@@ -6,11 +6,9 @@ import { NavLinkProps } from './NavLink.d';
 const NavLink: React.FC<NavLinkProps> = ({
   name,
   href,
-  onClick,
 }) => (
   <NavLinkWrapper
     href={href}
-    onClick={onClick}
   >
     {name}
   </NavLinkWrapper>

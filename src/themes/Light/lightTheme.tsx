@@ -34,7 +34,7 @@ export const lightTheme: DefaultTheme = {
   fontSizes: {
     ...FONT_SIZES,
   },
-  button: {
+  buttons: {
     ...BUTTONS,
   },
   alerts: {

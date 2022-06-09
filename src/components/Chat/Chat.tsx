@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { getCurrentConversationId } from '@components/Chat/helpers';
 import { ChatProps } from './Chat.d';
 
-import { ChatAsideLeft } from './ChatAsideLeft';
-import { ChatAsideRight } from './ChatAsideRight';
-import { ChatMain } from './ChatMain';
-import { ChatWindow } from './ChatWindow';
+import { ChatAsideLeft } from './components/common/ChatAsideLeft';
+import { ChatAsideRight } from './components/common/ChatAsideRight';
+import { ChatMain } from './components/common/ChatMain';
+import { ChatWindow } from './components/common/ChatWindow';
 
 const Chat: React.FC<ChatProps> = ({
   view = 'withAsides',
@@ -20,15 +20,15 @@ const Chat: React.FC<ChatProps> = ({
       view={view}
     >
       <ChatAsideLeft
-        currentConversation={currentConversation}
         conversations={conversations}
+        currentConversation={currentConversation}
         setCurrentConversation={setCurrentConversation}
       />
       <ChatMain
-        users={conversation?.guest}
-        messages={conversation?.messages}
         writeText={null}
         addMessage={null}
+        users={conversation?.guest}
+        messages={conversation?.messages}
         currentConversation={currentConversation}
       />
       <ChatAsideRight

@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // components
-import { Link } from '@components/Link';
-import { Image } from '@components/Image';
+import { Link } from '@components/ui/Link';
+import { Image } from '@components/ui/Image';
 import { Nav } from '@layout/Nav';
-import { Box } from '@components/Box';
-import { Button } from '@components/Button';
+import { Box } from '@components/ui/Box';
+import { Button } from '@components/ui/Button';
 
 import { useWindowSize } from '@hooks/useWindowSize';
 import {
@@ -42,6 +42,10 @@ const AsideLeft: React.FC<Props> = ({
         .includes(route.name));
 
     return children;
+  };
+
+  const enablePushNotification = () => {
+    console.log('push allowed');
   };
 
   return (
@@ -96,7 +100,7 @@ const AsideLeft: React.FC<Props> = ({
                   >
                     <NavLink
                       href={link.path}
-                      variant="dark"
+                      variant="text"
                       textDecoration="none"
                       currentPage={link.path === pathname}
                     >
@@ -126,7 +130,7 @@ const AsideLeft: React.FC<Props> = ({
               className="enable-notifications"
               variant="success"
               name="Enable Notifications"
-              onClick={() => {}}
+              onClick={() => enablePushNotification()}
             />
           </Nav>
         </AsideContainer>

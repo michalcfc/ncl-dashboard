@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { Reservations } from '@components/Reservations';
-import { Heading } from '@components/Heading';
+import { Heading } from '@components/ui/Heading';
 import { reservations } from '../lib/data/db.json';
 
 const InboxPage: React.FC = () => {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import breakpoint from '@utils/styles/breakpoints';
-import { Button } from '@components/Button';
+import { Button } from '@components/ui/Button';
 
 type DataProps = {
   isVisible?: boolean

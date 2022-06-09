@@ -12,13 +12,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 // components
-import { Box } from '@components/Box';
+import { Box } from '@components/ui/Box';
 import { NotificationsDropdown } from '@components/NotificationsDropdown';
 import { InboxDropdown } from '@components/InboxDropdown';
-import { AccountMenu } from '@components/AccountMenu';
-import { Button } from '@components/Button';
+import { AccountMenu } from '@components/common/AccountMenu';
+import { Button } from '@components/ui/Button';
 import { Nav } from '@layout/Nav';
-import { DarkModeSwitcher } from '@components/DarkModeSwitcher';
+import { DarkModeSwitcher } from '@components/common/DarkModeSwitcher';
 import { NavItem } from '@layout/Nav/NavItem';
 import { useWindowSize } from '@hooks/useWindowSize';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

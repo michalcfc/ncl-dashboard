@@ -32,7 +32,7 @@ export const darkTheme: DefaultTheme = {
   fontSizes: {
     ...FONT_SIZES,
   },
-  button: {
+  buttons: {
     ...BUTTONS,
   },
   alerts: {

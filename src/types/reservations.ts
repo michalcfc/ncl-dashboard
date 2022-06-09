@@ -142,5 +142,6 @@ export type Conversations = {
 
 export type Reservations = {
   inboxOwner: string
+  messages: Messages[]
   conversations: Conversations[]
 };

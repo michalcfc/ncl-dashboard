@@ -4,16 +4,19 @@ import {
   faEnvelope,
 } from '@fortawesome/free-regular-svg-icons';
 
-import { Dropdown } from '@components/Dropdown';
-import { DropdownMenu } from '@components/Dropdown/DropdownMenu';
-import { ConversationsItem } from '@components/Chat/ConversationsItem';
-import { Heading } from '@components/Heading';
-import { Text } from '@components/Text';
-import { Box } from '@components/Box';
-import { FONT_SIZES } from '@utils/styles/fontSizes';
-import { Button } from '@components/Button';
-import { Link } from '@components/Link';
+// utils
 import { COLORS } from '@utils/styles/colors';
+import { FONT_SIZES } from '@utils/styles/fontSizes';
+
+// components
+import { Dropdown } from '@components/ui/Dropdown';
+import { DropdownMenu } from '@components/ui/Dropdown/DropdownMenu';
+import { Heading } from '@components/ui/Heading';
+import { Text } from '@components/ui/Text';
+import { Box } from '@components/ui/Box';
+import { Button } from '@components/ui/Button';
+import { Link } from '@components/ui/Link';
+import { ConversationsItem } from '../Chat/components/Conversations';
 import { InboxDropdownProps } from './InboxDropdown.d';
 
 const InboxDropdown: React.FC<InboxDropdownProps> = ({

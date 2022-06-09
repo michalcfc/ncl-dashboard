@@ -1,12 +1,12 @@
 import React from 'react';
-import { Heading } from '@components/Heading';
-import { Grid } from '@components/Grid';
-import { Box } from '@components/Box';
+import { Heading } from '@components/ui/Heading';
+import { Grid } from '@components/ui/Grid';
+import { Box } from '@components/ui/Box';
 import { COLORS } from '@utils/styles/colors';
-import { Text } from '@components/Text';
+import { Text } from '@components/ui/Text';
 import { FONT_WEIGHTS } from '@utils/styles/fontWeights';
 import { FONT_SIZES } from '@utils/styles/fontSizes';
-import { Switch } from '@components/Switch';
+import { Switch } from '@components/ui/Switch';
 import { SPACING } from '@utils/styles/spacing';
 
 const Settings: React.FC = () => (

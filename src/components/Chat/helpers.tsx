@@ -1,4 +1,14 @@
-import { Conversations } from '../../types/reservations';
+import { Conversations, ReservationStatus } from '../../types/reservations';
+
+export const isNewReservation = (status: ReservationStatus) => {
+  const newReservationStatuses = ['new', 'new_inquiry', 'accepted'];
+  return newReservationStatuses.includes(status);
+};
+
+export const isReservationToAccept = (status: ReservationStatus) => {
+  const newReservationStatuses = ['new', 'new_inquiry'];
+  return newReservationStatuses.includes(status);
+};
 
 export const getCurrentConversationId = (
   conversations: Conversations[],

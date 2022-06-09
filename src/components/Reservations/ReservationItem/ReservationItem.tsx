@@ -12,10 +12,10 @@ import { SPACING } from '@utils/styles/spacing';
 import { BORDER_RADIUS } from '@utils/styles/borderRadius';
 
 // components
-import { Box } from '@components/Box';
-import { Link } from '@components/Link';
-import { Image } from '@components/Image';
-import { Text } from '@components/Text';
+import { Box } from '@components/ui/Box';
+import { Link } from '@components/ui/Link';
+import { Image } from '@components/ui/Image';
+import { Text } from '@components/ui/Text';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';

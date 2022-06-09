@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Chat } from '@components/Chat';
 
-import { Heading } from '@components/Heading';
+import { Heading } from '@components/ui/Heading';
 // import { reservations } from '../lib/data/db.json';
 
 const ChatPage: React.FC = () => (

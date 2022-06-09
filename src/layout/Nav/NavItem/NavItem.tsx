@@ -9,7 +9,6 @@ const NavItem: React.FC<NavItemProps> = ({
   name,
   component,
   isHorizontal,
-  setOpen,
   children,
 }) => (
   <NavItemWrapper
@@ -20,7 +19,6 @@ const NavItem: React.FC<NavItemProps> = ({
         <NavLink
           href="/"
           name={name}
-          onClick={() => setOpen(!open)}
         />
       )}
     {open && children}

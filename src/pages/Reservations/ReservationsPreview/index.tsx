@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useQuery } from 'react-query';
 
-import { Reservations } from '@components/Reservations';
 import { fetchAPI } from '@lib/api';
-// import { reservations } from '../../../lib/data/db.json';
+import { useAppDispatch } from '@store/hooks';
+import { Reservations } from '@components/Reservations';
+import { fetchData } from '@store/Reservations/reservetionsSlice';
 
 const ReservationsPreview: React.FC = () => {
-  const [reservations, setReservations] = useState(null);
+  const { data, isLoading } = useQuery('conversations', () => fetchAPI('inbox/9223'));
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetchAPI('inbox/9223');
-      setReservations(response);
-    };
+  const dispatch = useAppDispatch();
+  dispatch(fetchData(data));
 
-    fetchData();
-  }, []);
-
-  if (!reservations) {
+  if (isLoading) {
     return <>loading</>;
   }
 
   return (
     <Reservations
-      reservations={reservations.conversations}
+      reservations={data.conversations}
     />
   );
 };

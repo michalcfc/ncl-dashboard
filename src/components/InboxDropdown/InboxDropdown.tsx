@@ -44,7 +44,7 @@ const InboxDropdown: React.FC<InboxDropdownProps> = ({
           <Button
             variant="link"
             name="Mark all as read"
-            onClick={() => console.log('click')}
+            onClick={() => {}}
           />
         </Box>
         <Text

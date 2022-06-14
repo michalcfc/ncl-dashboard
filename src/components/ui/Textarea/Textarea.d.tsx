@@ -1,3 +1,4 @@
+import { TextareaHTMLAttributes } from 'react';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   SpaceProps,
@@ -8,11 +9,11 @@ type CustomProps = {
   icon?: IconDefinition
   isActiveIcon?: boolean
   label?: string
-  onChange: () => void;
   placeholder: string
 };
 
 export type TextareaProps =
     SpaceProps &
     CustomProps &
+    TextareaHTMLAttributes<any> &
     LayoutProps;

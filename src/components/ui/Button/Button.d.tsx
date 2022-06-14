@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from 'react';
 import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { Colors } from '@utils/styles/types';
 import {
   SpaceProps,
   BackgroundProps,
@@ -13,6 +14,7 @@ import { IconPosition, ButtonSizes, ButtonVariants } from './types';
 
 type IconSettings = {
   size?: SizeProp
+  color?: Colors
   name: IconDefinition,
   position: IconPosition
 };

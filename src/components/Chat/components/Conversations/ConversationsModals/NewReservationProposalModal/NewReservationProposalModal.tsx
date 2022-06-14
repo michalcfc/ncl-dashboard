@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Modal } from '@components/ui/Modal';
+import {
+  useCloseModal,
+} from '@components/Chat/components/Conversations/ConversationsModals/ConversationsModalContext/hooks';
 
-// components
-
-const NewReservationProposalModalD = () => {
-  const [
-    isAcceptedReservationModalOpen,
-    setAcceptedReservationModalOpen,
-  ] = useState<boolean>(false);
+const NewReservationProposalModal = () => {
+  const onClose = useCloseModal();
 
   return (
     <Modal
-      title="Podaj powód odrzucenia:"
-      isOpen={isAcceptedReservationModalOpen}
-      onClose={setAcceptedReservationModalOpen}
+      title="Nowa propozycja"
+      onClose={onClose}
     >
       content
     </Modal>
@@ -22,4 +19,4 @@ const NewReservationProposalModalD = () => {
   );
 };
 
-export default NewReservationProposalModalD;
+export default NewReservationProposalModal;

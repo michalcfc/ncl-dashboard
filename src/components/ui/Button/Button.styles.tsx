@@ -45,7 +45,10 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   height: ${({ variant }) => variant === 'text' && 'unset'};
   border-radius: ${({ theme }) => theme.borderRadius.base};
   &:hover {
-    background:  ${theme('buttons.backgroundHover', 'variant')};
+    color: ${theme('buttons.colorHover', 'variant')};
+    border: ${theme('buttons.borderHover', 'variant')};
+    text-decoration: ${({ variant }) => variant === 'link' && 'underline'};
+    background: ${({ variant }) => variant !== 'link' && theme('buttons.backgroundHover', 'variant')}};
   }
 
   &[disabled] {

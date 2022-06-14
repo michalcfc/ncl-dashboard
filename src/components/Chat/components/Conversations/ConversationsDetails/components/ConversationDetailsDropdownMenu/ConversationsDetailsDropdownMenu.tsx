@@ -13,7 +13,7 @@ const ConversationsDetailsDropdownMenu: React.FC<ConversationsDetailsDropdownMen
   isOpen,
 }) => {
   const reservations = useSelector((state: any) => state.reservations.conversations);
-  console.log(reservations);
+
   return (
     <div>
       {isOpen

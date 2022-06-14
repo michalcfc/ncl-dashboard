@@ -1,7 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { space } from 'styled-system';
 
 type DataProps = {
+  isOpen?: boolean
+  customTrigger?: boolean
   isUnderline?: string
 };
 
@@ -14,7 +16,7 @@ export const TooltipWrapper = styled.div<DataProps>`
 export const TooltipContent = styled.div<DataProps>`
   position: fixed;
   transform: translate(-50%, 10%);
-  width: 252px;
+  width: fit-content;
   z-index: 999;
   white-space: normal;
   opacity: 0;
@@ -37,11 +39,24 @@ export const TooltipContent = styled.div<DataProps>`
 export const TooltipText = styled.span<DataProps>`
   text-decoration: ${({ isUnderline }) => (isUnderline ? 'underline' : 'none')};
   text-decoration-style: ${({ isUnderline }) => (isUnderline ? 'dashed' : 'none')};
+
+  ${({ isOpen }) => isOpen && css`
+    & + ${TooltipContent} {
+      opacity: 1;
+      visibility: visible;
+    }
+  `}
+  
+  ${({ customTrigger }) => !customTrigger && css`
+    &:hover + ${TooltipContent} {
+      opacity: 1;
+      visibility: visible;
+    }
+  `}
+  
   &:hover {
     cursor: ${({ isUnderline }) => (isUnderline ? 'help' : 'none')};
   }
-  &:hover + ${TooltipContent} {
-    opacity: 1;
-    visibility: visible;
-  }
+  
+  
 `;

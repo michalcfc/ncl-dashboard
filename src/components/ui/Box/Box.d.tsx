@@ -14,6 +14,7 @@ import {
 } from 'styled-system';
 
 type CustomProps = {
+  noOfLines?: number
   hoverEffect?: boolean,
 };
 

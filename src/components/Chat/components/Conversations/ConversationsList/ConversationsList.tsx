@@ -4,22 +4,22 @@ import { ConversationsItem } from '../ConversationsItem';
 import { ConversationsListProps } from './ConversationsList.d';
 import { ConversationsListWrapper } from './ConversationsList.styles';
 
-import { getLastConversationMessage } from '../../../helpers';
-
 const ConversationsList: React.FC<ConversationsListProps> = ({
   setCurrentConversation,
+  currentConversation,
   conversations,
 }) => (
   <ConversationsListWrapper>
     <ul>
       {conversations.map((conversation) => (
         <ConversationsItem
-          key={conversation.id}
           userAvatar=""
+          key={conversation.id}
           userName={conversation.guest.name}
           conversationId={(Number(conversation.id))}
           setCurrentConversation={setCurrentConversation}
-          lastMessage={getLastConversationMessage(conversation.messages)}
+          isSelected={+conversation.id === currentConversation}
+          lastMessage="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         />
       ))}
     </ul>

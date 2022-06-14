@@ -52,6 +52,12 @@ export type Messages = {
   text: string
 };
 
+export type Template = {
+  id: number
+  title: string
+  desc: string
+};
+
 export type ReservationStatus =
   | 'new_inquiry'
   | 'rejected_by_user'
@@ -59,6 +65,9 @@ export type ReservationStatus =
   | 'reject_by_host'
   | 'wait_for_payment'
   | 'new'
+  | 'confirmed_stay'
+  | 'rejected_by_dok_after_paid'
+  | 'rejected_by_overbooking'
   | 'expired'
   | 'rejected'
   | 'accepted'

@@ -15,6 +15,7 @@ declare module 'styled-components' {
         [el: string]: string
       }
     },
+    sizes: any,
     badges: {
       [el: string]: {
         [el: string]: string

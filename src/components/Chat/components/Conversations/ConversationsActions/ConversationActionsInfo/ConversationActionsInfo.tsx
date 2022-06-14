@@ -21,7 +21,6 @@ const ConversationActionsInfo: React.FC<ConversationActionsInfoD> = () => (
       my={3}
     >
       <Text
-        muted
         mb={3}
       >
         Termin
@@ -30,9 +29,7 @@ const ConversationActionsInfo: React.FC<ConversationActionsInfoD> = () => (
         {' '}
         pozostanie zablokowany do rezerwacji do czasu akceptacji lub odrzucenia rezerwacji.
       </Text>
-      <Text
-        muted
-      >
+      <Text>
         Odpowiedz w ciągu
         {' '}
         <Text

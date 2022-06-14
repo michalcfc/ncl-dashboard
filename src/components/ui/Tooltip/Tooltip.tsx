@@ -9,16 +9,20 @@ import { TooltipProps } from './Tooltip.d';
 const Tooltip: React.FC<TooltipProps> = ({
   label,
   text,
+  isOpen,
+  customTrigger,
   children,
 }) => (
   <TooltipWrapper>
     <TooltipText
+      isOpen={isOpen}
       isUnderline={text}
+      customTrigger={customTrigger}
     >
-      {text}
+      {text || children}
     </TooltipText>
     <TooltipContent>
-      {<span>{label}</span> || children}
+      <span>{label}</span>
     </TooltipContent>
   </TooltipWrapper>
 

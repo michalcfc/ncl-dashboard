@@ -15,11 +15,26 @@ const textareaStyledSystem = compose(
   border,
 );
 
-export const TextareaStyle = styled.textarea<DataProps>`
-  ${textareaStyledSystem};
+export const TextareaWrapper = styled.div<DataProps>`
+  width: 100%;
   display: flex;
+  flex-direction: column;
   position: relative;
-  align-items: center;
-  border-radius: ${({ theme }) => theme.borderRadius.default};
-  border: ${({ theme }) => `1 px solid ${theme.colors.lightGray}`};
+  ${textareaStyledSystem};
+`;
+
+export const InputStyle = styled.textarea<DataProps>`
+  padding: ${({ theme }) => theme.spacing.md};
+  border-radius: ${({ theme }) => theme.borderRadius.base};
+  border: ${({ theme }) => `1px solid ${theme.colors.gray300}`};
+  
+  &:hover,
+  &:focus {
+    border: ${({ theme }) => `1px solid ${theme.colors.black}`};
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
 `;

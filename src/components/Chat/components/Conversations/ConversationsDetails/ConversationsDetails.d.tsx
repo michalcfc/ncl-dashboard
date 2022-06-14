@@ -1,5 +1,5 @@
 import { Context } from '../../../../../types/reservations';
 
-export interface ConversationsDetailsProps {
+export interface ConversationsDetailsD {
   conversationDetails: Context
 }

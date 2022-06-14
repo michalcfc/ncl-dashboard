@@ -14,14 +14,15 @@ import { UserStatusDot } from '@components/ui/UserStatusDot';
 import { Text } from '@components/ui/Text';
 import { NotificationAlertDot } from '@components/NotificationAlertDot';
 import { Button } from '@components/ui/Button';
-import { ConversationsItemWrapper } from './ConversationsItem.styles';
 import { ConversationsItemProps } from './ConversationsItem.d';
+import { ConversationsItemWrapper } from './ConversationsItem.styles';
 
 const ConversationsItem: React.FC<ConversationsItemProps> = ({
   userName,
   userAvatar,
-  conversationId,
   lastMessage,
+  isSelected,
+  conversationId,
   setCurrentConversation,
 }) => {
   const navigate = useNavigate();
@@ -41,11 +42,13 @@ const ConversationsItem: React.FC<ConversationsItemProps> = ({
         }}
       >
         <Box
+          width="100%"
           hoverEffect
-          p={2}
+          p={SPACING.sm}
           display="flex"
-          borderRadius={BORDER_RADIUS.default}
           alignItems="center"
+          borderRadius={BORDER_RADIUS.default}
+          background={isSelected && COLORS.lightGray}
         >
           <Box
             mr={3}

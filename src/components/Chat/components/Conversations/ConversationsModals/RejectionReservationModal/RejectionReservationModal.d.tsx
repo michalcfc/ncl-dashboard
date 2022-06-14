@@ -1,4 +1,4 @@
 export interface RejectionReservationModalD {
-  isAcceptedReservationModalOpen: boolean
-  setAcceptedReservationModalOpen: (arg: boolean) => void
+  isRejectionReservationModalOpen: boolean
+  setRejectionReservationModalOpen: (arg: boolean) => void
 }

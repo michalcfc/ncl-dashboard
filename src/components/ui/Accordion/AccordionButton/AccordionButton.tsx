@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { AccordionButtonProps } from './AccordionButton.d';
 
 import {
@@ -19,7 +19,9 @@ const AccordionButton: React.FC<AccordionButtonProps> = ({
     {title}
     <FontAwesomeIcon
       size="sm"
-      icon={faChevronDown}
+      icon={isOpen
+        ? faChevronUp
+        : faChevronDown}
     />
   </AccordionButtonStyles>
 );

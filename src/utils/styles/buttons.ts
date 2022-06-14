@@ -67,6 +67,11 @@ export const BUTTONS = {
 
   text: {
     padding: 0,
+    background: 'transparent',
+  },
+
+  link: {
+    padding: 0,
     color: COLORS.brand,
     background: 'transparent',
   },
@@ -76,7 +81,27 @@ export const BUTTONS = {
     danger: 'transparent',
     warning: 'transparent',
     text: 'transparent',
+    link: 'transparent',
     outline: '1px solid',
+    default: 'transparent',
+  },
+
+  colorHover: {
+    link: 'inherit',
+    text: 'current',
+    icon: 'current',
+    ghost: 'current',
+    outline: COLORS.white,
+  },
+
+  borderHover: {
+    success: 'transparent',
+    danger: 'transparent',
+    warning: 'transparent',
+    text: 'transparent',
+    ghost: 'transparent',
+    link: 'transparent',
+    outline: `1px solid ${COLORS.brand}`,
     default: 'transparent',
   },
 
@@ -95,6 +120,8 @@ export const BUTTONS = {
 
   backgroundHover: {
     text: lighten(0.1, COLORS.lightGray),
+    link: lighten(0.1, COLORS.lightGray),
+    icon: lighten(0.1, COLORS.lightBlue),
     danger: lighten(0.1, COLORS.red),
     success: lighten(0.1, COLORS.brand),
     primary: lighten(0.1, COLORS.brand),

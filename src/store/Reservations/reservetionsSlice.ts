@@ -22,9 +22,18 @@ export const reservationsSlice = createSlice({
         message,
       };
     },
+    changeInboxView(state, action: PayloadAction<string>) {
+      const inboxOwner = action.payload;
+      return {
+        ...state,
+        conversations: {
+          ...state.conversations,
+          inboxOwner,
+        },
+      };
+    },
     fetchData(state, action: PayloadAction<Conversations[]>) {
       const conversations = action.payload;
-      console.log(action.payload);
       return {
         ...state,
         conversations,
@@ -34,6 +43,6 @@ export const reservationsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { sendMessage, fetchData } = reservationsSlice.actions;
+export const { changeInboxView, sendMessage, fetchData } = reservationsSlice.actions;
 
 export default reservationsSlice.reducer;

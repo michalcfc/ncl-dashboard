@@ -4,13 +4,13 @@ import { useQuery } from 'react-query';
 import { fetchAPI } from '@lib/api';
 import { useAppDispatch } from '@store/hooks';
 import { fetchData } from '@store/Reservations/reservetionsSlice';
-import { reservations } from '../../../lib/data/db.json';
 
 const ReservationsDetails: React.FC = () => {
   const { data, isLoading } = useQuery('conversations', () => fetchAPI('inbox/9223'));
 
   const dispatch = useAppDispatch();
   dispatch(fetchData(data));
+
   useEffect(() => {
   }, [data]);
 
@@ -20,7 +20,7 @@ const ReservationsDetails: React.FC = () => {
 
   return (
     <Chat
-      conversations={reservations.conversations}
+      conversations={data.conversations}
     />
   );
 };

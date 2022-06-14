@@ -1,42 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal } from '@components/ui/Modal';
 import {
-  getCurrentContentMode,
-} from './helpers';
-import { RejectionReservationModalD } from './RejectionReservationModal.d';
+  useOpenModal,
+  useCloseModal,
+} from '../ConversationsModalContext/hooks';
+import { ModalTypes } from '../types';
 
-import { ContentType } from '../types';
-
-const RejectionReservationModal = ({
-  isAcceptedReservationModalOpen,
-  setAcceptedReservationModalOpen,
-}: RejectionReservationModalD) => {
-  const [
-    currentContentMode,
-    setCurrentContentMode,
-  ] = useState<ContentType>(ContentType.ConfirmRejectionReservation);
-
-  const {
-    title,
-    content,
-    subtitle,
-    actionButtons,
-  } = getCurrentContentMode(
-    currentContentMode,
-    setCurrentContentMode,
-  );
+const RejectionReservationModal = () => {
+  const onClose = useCloseModal();
+  const openModal = useOpenModal();
 
   return (
     <Modal
-      title={title}
-      subtitle={subtitle}
-      actionButtons={actionButtons}
-      isOpen={isAcceptedReservationModalOpen}
-      onClose={setAcceptedReservationModalOpen}
-    >
-      {content}
-    </Modal>
-
+      title="Czy napewno chcesz odrzucić rezerwację?"
+      subtitle="Masz możliwość zaproponowania innych warunków dla tej rezerwacji"
+      actionButtons={[{
+        id: 1,
+        name: 'Nie, chcę zaproponować inne warunki rezerwacji',
+        onClick: () => openModal({ modal: ModalTypes.NewReservationProposal }),
+      },
+      {
+        id: 2,
+        name: 'Tak, chcę odrzucić tę prośbę',
+        variant: 'danger',
+        onClick: () => openModal({ modal: ModalTypes.RejectionReasons }),
+      }]}
+      onClose={onClose}
+    />
   );
 };
 

@@ -1,6 +1,10 @@
 import React from 'react';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
+// utils
+import { SIZES } from '@utils/styles/sizes';
+import { SPACING } from '@utils/styles/spacing';
+
 // components
 import { Text } from '@components/ui/Text';
 import { Button } from '@components/ui/Button';
@@ -36,31 +40,38 @@ const Modal: React.FC<ModalProps> = ({
           justifyContent="space-between"
         >
           <Heading
-            type="h5"
+            type="h4"
             text={title}
             textAlign="left"
           />
           <Button
-            variant="ghost"
+            variant="text"
             settings={{
               icon: {
                 size: 'lg',
+                color: 'lightGray',
                 name: faTimes,
                 position: 'center',
               },
             }}
-            onClick={() => onClose(false)}
+            onClick={onClose}
           />
         </FlexBox>
         <Text muted text={subtitle} />
       </ModalHeader>
+      {children && (
       <ModalBody>
         {children}
       </ModalBody>
+      )}
+      {actionButtons && (
       <ModalFooter>
         {actionButtons?.map((btn) => (
           <Button
             key={btn.id}
+            width={SIZES.full}
+            mt={btn.id !== 1
+                    && SPACING.sm}
             name={btn.name}
             variant={btn.variant}
             onClick={btn.onClick}
@@ -68,6 +79,7 @@ const Modal: React.FC<ModalProps> = ({
           />
         ))}
       </ModalFooter>
+      )}
     </ModalContent>
   </ModalWrapper>
 

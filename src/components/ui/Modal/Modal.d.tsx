@@ -12,8 +12,8 @@ type Buttons = {
 export type ModalProps = {
   order?: number
   title: string
-  isOpen: boolean
+  isOpen?: boolean
   subtitle?: string
   actionButtons?: Buttons[]
-  onClose: (arg: boolean) => void
+  onClose: () => void
 };

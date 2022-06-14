@@ -9,6 +9,7 @@ const Alert: React.FC<AlertProps> = ({
   text,
   variant,
   isShow = true,
+  children,
 }) => (
   <div>
     {isShow
@@ -17,7 +18,7 @@ const Alert: React.FC<AlertProps> = ({
             variant={variant}
           >
             <AlertContent>
-              {text}
+              {text || children}
             </AlertContent>
           </AlertWrapper>
           )}

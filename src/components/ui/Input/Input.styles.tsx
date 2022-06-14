@@ -16,21 +16,6 @@ const inputStyledSystem = compose(
   layout,
 );
 
-export const Label = styled.label`
-      color: #999;
-      font-weight: normal;
-      opacity: 0.75;
-      order: 1;
-      /*outline: 0;*/
-      padding-left: ${({ theme }) => theme.spacing.sm};
-      pointer-events: none;
-      text-shadow: none;
-      text-transform: capitalize;
-      transform-origin: left top;
-      transform: scale(1) translate3d(0, 2rem, 0);
-      transition: 200ms ease all;
-    `;
-
 export const InputWrapper = styled.div<DataProps>`
   ${inputStyledSystem};
   display: flex;
@@ -43,24 +28,16 @@ export const InputWrapper = styled.div<DataProps>`
 
 export const InputStyle = styled.input<DataProps>`
   border-radius: 0;
-  display: flex;
   text-shadow: none;
-  padding: ${({ theme }) => theme.spacing.sm};
-  border-radius: ${({ theme }) => theme.borderRadius.default};
-  border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
-  order: 2;
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  padding: ${({ theme }) => `${theme.spacing.md} ${theme.spacing.sm}`};
+  border-radius: ${({ theme }) => theme.borderRadius.base};
+  border: ${({ theme }) => `1px solid ${theme.colors.gray300}`};
+  &:hover,
+  &:focus {
+    border-color: ${({ theme }) => theme.colors.black};
+  }
   &:focus {
     outline: 0;
-  }
-
-  &:not(:focus) {
-    color: transparent;
-  }
-
-  &:focus + ${Label} {
-    color:  ${({ theme }) => theme.colors.gray};
-    opacity: 1;
-    transform: scale(0.8) translate3d(0, 1rem, 0);
-    padding-left: 0;
   }
 `;

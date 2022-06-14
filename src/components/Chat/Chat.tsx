@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { getCurrentConversationId } from '@components/Chat/helpers';
+import { useParams } from 'react-router';
 import { ChatProps } from './Chat.d';
 
 import { ChatAsideLeft } from './components/common/ChatAsideLeft';
@@ -12,9 +13,17 @@ const Chat: React.FC<ChatProps> = ({
   view = 'withAsides',
   conversations,
 }) => {
-  const [currentConversation, setCurrentConversation] = useState<number>(0);
-  const conversation = getCurrentConversationId(conversations, currentConversation);
+  const [currentConversation, setCurrentConversation] = useState<number>(null);
+  const [conversationData, setConversationData] = useState(null);
 
+  const { id } = useParams();
+
+  useEffect(() => {
+    setCurrentConversation(+id);
+    setConversationData(getCurrentConversationId(conversations, currentConversation));
+  }, [currentConversation]);
+
+  console.log(conversations);
   return (
     <ChatWindow
       view={view}
@@ -27,12 +36,12 @@ const Chat: React.FC<ChatProps> = ({
       <ChatMain
         writeText={null}
         addMessage={null}
-        users={conversation?.guest}
-        messages={conversation?.messages}
+        users={conversationData?.guest}
+        messages={conversationData?.messages}
         currentConversation={currentConversation}
       />
       <ChatAsideRight
-        conversationDetails={conversation?.context}
+        conversationDetails={conversationData?.context}
       />
     </ChatWindow>
   );

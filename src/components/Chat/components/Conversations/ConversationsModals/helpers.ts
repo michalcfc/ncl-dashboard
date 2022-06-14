@@ -1,17 +1,28 @@
-export const MODAL_TITLE = {
-  confirmRejectionReservation: 'Czy na pewno chcesz odrzucić rezerwację?',
-  newProposalReservation: 'Nowa propozycja',
-  rejectionReasons: 'Podaj powód odrzucenia rezerwacji',
-};
+import { ModalTypes } from './types';
+import {
+  TemplatesModal,
+  SetMinStayModal,
+  EditTemplateModal,
+  DeleteTemplateModal,
+  CreateTemplateModal,
+  RejectionReasonsModal,
+  SetCorrectPricesModal,
+  SetTermAsOccupiedModal,
+  RejectionReservationModal,
+  TermOccupiedConfirmedModal,
+  NewReservationProposalModal,
+} from './index';
 
-export const MODAL_SUBTITLE = {
-  confirmRejectionReservation: 'Masz możliwość zaproponowania innych warunków dla tej rezerwacji.',
-};
-
-export const MODAL_SUCCESS_BUTTON_NAME = {
-  rejectionReasons: 'Nie, chcę zaproponować nowe warunki',
-};
-
-export const MODAL_DANGER_BUTTON_NAME = {
-  rejectionReasons: 'Tak, chcę odrzucić tę rezerwację',
+export const MODAL_COMPONENTS: any = {
+  [ModalTypes.SetMinStay]: SetMinStayModal,
+  [ModalTypes.SelectTemplate]: TemplatesModal,
+  [ModalTypes.EditTemplate]: EditTemplateModal,
+  [ModalTypes.CreateTemplate]: CreateTemplateModal,
+  [ModalTypes.SetCorrectPrices]: SetCorrectPricesModal,
+  [ModalTypes.RejectionReasons]: RejectionReasonsModal,
+  [ModalTypes.DeleteTemplateModal]: DeleteTemplateModal,
+  [ModalTypes.SetTermAsOccupied]: SetTermAsOccupiedModal,
+  [ModalTypes.TermOccupiedConfirmed]: TermOccupiedConfirmedModal,
+  [ModalTypes.NewReservationProposal]: NewReservationProposalModal,
+  [ModalTypes.ConfirmRejectionReservation]: RejectionReservationModal,
 };

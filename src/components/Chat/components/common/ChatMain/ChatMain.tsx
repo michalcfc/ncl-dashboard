@@ -18,22 +18,25 @@ const ChatMain: React.FC<ChatMainProps> = ({
   addMessage,
   writeText,
   currentConversation,
-}) => (
-  <ChatMainWrapper>
-    <ChatMainContent>
-      <ChatTop
-        users={users}
-      />
-      <MessageList
-        messages={messages}
-        currentConversation={currentConversation}
-      />
-      <MessageInput
-        writeText={writeText}
-        addMessage={addMessage}
-      />
-    </ChatMainContent>
-  </ChatMainWrapper>
-);
+}) => {
+  console.log(messages);
+  return (
+    <ChatMainWrapper>
+      <ChatMainContent>
+        <ChatTop
+          users={users}
+        />
+        <MessageList
+          messages={messages}
+          currentConversation={currentConversation}
+        />
+        <MessageInput
+          writeText={writeText}
+          addMessage={addMessage}
+        />
+      </ChatMainContent>
+    </ChatMainWrapper>
+  );
+};
 
 export default ChatMain;

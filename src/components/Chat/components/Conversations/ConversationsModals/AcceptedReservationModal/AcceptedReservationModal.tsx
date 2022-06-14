@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Modal } from '@components/ui/Modal';
+import {
+  useCloseModal,
+} from '../ConversationsModalContext/hooks';
 
 // components
 
 const AcceptedReservationModal = () => {
-  const [
-    isAcceptedReservationModalOpen,
-    setAcceptedReservationModalOpen,
-  ] = useState<boolean>(false);
-
+  const onClose = useCloseModal();
   return (
     <Modal
       title="Podaj powód odrzucenia:"
-      isOpen={isAcceptedReservationModalOpen}
-      onClose={setAcceptedReservationModalOpen}
+      onClose={onClose}
     >
       content
     </Modal>

@@ -6,61 +6,53 @@ import {
   AccordionItem,
   AccordionPanel,
 } from '@components/ui/Accordion';
-import { ConversationsDetailsHeader } from './ConversationDetailsHeader';
-import { ConversationsDetailsProps } from './ConversationsDetails.d';
+import {
+  StayDetails,
+  ContactDetails,
+  CostOfStayDetails,
+  AdditionalPaymentsDetails, ProcessDetails,
+} from './components';
+import { ConversationsDetailsD } from './ConversationsDetails.d';
 import { ConversationsDetailsWrapper } from './ConversationsDetails.styles';
 
-const ConversationsDetails: React.FC<ConversationsDetailsProps> = ({
+const ConversationsDetails = ({
   conversationDetails,
-}) => (
-  <ConversationsDetailsWrapper>
+}: ConversationsDetailsD) => {
+  const accordionItems = [
+    {
+      id: 1,
+      title: 'Szczczegóły pobytu',
+      content: <StayDetails
+        dateTo={conversationDetails?.dateTo}
+        dateFrom={conversationDetails?.dateFrom}
+        nbAdults={conversationDetails?.nbAdults}
+        nbChildren={conversationDetails?.nbChildren}
+        nbOfNights={conversationDetails?.daysBetweenTermText}
+      />,
+    },
+    { id: 2, title: 'Koszty pobytu', content: <CostOfStayDetails /> },
+    { id: 3, title: 'Możliwe dodatkowe opłaty', content: <AdditionalPaymentsDetails /> },
+    { id: 4, title: 'Dane kontaktowe', content: <ContactDetails /> },
+  ];
 
-    <ConversationsDetailsHeader />
-    {console.log(conversationDetails)}
-    <Accordion>
-      <AccordionItem>
-        <AccordionButton title="Szczegóły pobytu" />
-        <AccordionPanel>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
-          </div>
-        </AccordionPanel>
-      </AccordionItem>
+  console.log(conversationDetails);
 
-      <AccordionItem>
-        <AccordionButton title="Koszty pobytu" />
-        <AccordionPanel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </AccordionPanel>
-      </AccordionItem>
+  return (
 
-      <AccordionItem>
-        <AccordionButton title="Możliwe dodatkowe opłaty" />
-        <AccordionPanel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </AccordionPanel>
-      </AccordionItem>
-
-      <AccordionItem>
-        <AccordionButton title="Dane kontaktowe" />
-        <AccordionPanel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
-  </ConversationsDetailsWrapper>
-);
+    <ConversationsDetailsWrapper>
+      <Accordion>
+        {accordionItems.map((accordionItem) => (
+          <AccordionItem key={accordionItem.id}>
+            <AccordionButton title={accordionItem.title} />
+            <AccordionPanel>
+              {accordionItem.content}
+            </AccordionPanel>
+          </AccordionItem>
+        ))}
+      </Accordion>
+      <ProcessDetails />
+    </ConversationsDetailsWrapper>
+  );
+};
 
 export default ConversationsDetails;

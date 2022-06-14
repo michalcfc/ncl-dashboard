@@ -1,47 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { SPACING } from '@utils/styles/spacing';
+import { COLORS } from '@utils/styles/colors';
 
 // components
 import { Box } from '@components/ui/Box';
 import { Button } from '@components/ui/Button';
 import { FlexBox } from '@components/ui/FlexBox';
-import { RejectionReservationModal } from '@components/Chat/components/Conversations';
+import {
+  useOpenModal,
+} from '@components/Chat/components/Conversations/ConversationsModals/ConversationsModalContext/hooks';
+import { ModalTypes } from '@components/Chat/components/Conversations/ConversationsModals/types';
 import { ConversationActionsButtonsD } from './ConversationActionsButtons.d';
 
 // components
 
 const ConversationActionsButtons: React.FC<ConversationActionsButtonsD> = () => {
-  const [
-    isAcceptedReservationModalOpen,
-    setAcceptedReservationModalOpen,
-  ] = useState<boolean>(false);
+  const openModal = useOpenModal();
 
   return (
     <>
       <FlexBox>
         <Button
           name="Zaakceptuj"
-          onClick={() => console.log('click')}
+          onClick={() => {}}
         />
         <Button
-          ml={3}
+          ml={SPACING.md}
           name="Odrzuć"
           variant="danger"
-          onClick={() => setAcceptedReservationModalOpen(true)}
+          onClick={() => openModal({ modal: ModalTypes.ConfirmRejectionReservation })}
         />
       </FlexBox>
       <Box
-        mt={2}
+        mt={SPACING.md}
       >
         <Button
           variant="text"
-          onClick={() => {}}
+          color={COLORS.brand}
+          onClick={() => openModal({ modal: ModalTypes.NewReservationProposal })}
           name="Zaproponuj inne warunki"
         />
       </Box>
-      <RejectionReservationModal
-        isAcceptedReservationModalOpen={isAcceptedReservationModalOpen}
-        setAcceptedReservationModalOpen={setAcceptedReservationModalOpen}
-      />
     </>
   );
 };

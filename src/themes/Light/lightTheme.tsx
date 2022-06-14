@@ -10,6 +10,7 @@ import { FONT_WEIGHTS } from '@utils/styles/fontWeights';
 import { ALERTS } from '@utils/styles/alerts';
 import { BADGES } from '@utils/styles/badges';
 import { ANIMATIONS } from '@utils/styles/animations';
+import { SIZES } from '@utils/styles/sizes';
 
 export const lightTheme: DefaultTheme = {
   textColor: '#222',
@@ -27,6 +28,9 @@ export const lightTheme: DefaultTheme = {
   },
   spacing: {
     ...SPACING,
+  },
+  sizes: {
+    ...SIZES,
   },
   fontWeights: {
     ...FONT_WEIGHTS,

@@ -1,4 +1,4 @@
-import styled, { CSSProperties } from 'styled-components';
+import styled, { css, CSSProperties } from 'styled-components';
 import {
   BackgroundProps,
   background,
@@ -31,7 +31,8 @@ PositionProps &
 SpaceProps &
 Pick<CSSProperties, 'transform' | 'transition' | 'textAlign'> &
 {
-  hoverEffect: boolean
+  hoverEffect?: boolean
+  noOfLines?: number
 };
 
 const boxStyledSystem = compose(
@@ -62,4 +63,11 @@ export const BoxWrapper = styled.div<BoxProps>`
     cursor:  ${({ hoverEffect }) => hoverEffect && 'pointer'};
     background: ${({ theme, hoverEffect }) => hoverEffect && theme.colors.lightGray};
   }
+  
+  ${({ noOfLines }) => noOfLines && css`
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: ${noOfLines};
+    -webkit-box-orient: vertical;
+  `}
 `;

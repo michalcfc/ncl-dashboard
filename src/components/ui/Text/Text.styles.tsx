@@ -26,7 +26,7 @@ const textStyledSystem = compose(
   typography,
 );
 
-export const TextStyles = styled.span<TextProps>`
+export const TextStyles = styled.p<TextProps>`
   ${textStyledSystem};
   color: ${({ theme, muted }) => muted && theme.colors.gray};
   

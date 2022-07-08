@@ -17,6 +17,7 @@ export const ChatAsideRightWrapper = styled.div<DataProps>`
 export const ChatAsideRightContent = styled.div<DataProps>`
     height: 100%;
     display: flex;
+    overflow: auto;
     flex-direction: column;
     border-radius: ${({ theme }) => theme.borderRadius.md};
     background: ${({ theme }) => theme.colors.white};

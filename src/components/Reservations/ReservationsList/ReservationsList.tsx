@@ -21,11 +21,11 @@ const ReservationsList: React.FC<ReservationsProps> = ({
         id={id}
         key={id}
         host={host}
-        dateFrom={context.dateFrom}
-        dateTo={context.dateTo}
         guest={guest}
+        dateTo={context.dateTo}
         status={context.status}
         statusName={statusName}
+        dateFrom={context.dateFrom}
         firstMessageTime={firstMessageTime}
       />
     ))}

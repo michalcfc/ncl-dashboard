@@ -12,8 +12,6 @@ const ReservationsPreview: React.FC = () => {
   const dispatch = useAppDispatch();
   dispatch(fetchData(data));
 
-  console.log(data?.conversations);
-
   if (isLoading) {
     return <>loading</>;
   }

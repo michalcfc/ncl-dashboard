@@ -49,8 +49,8 @@ const switchTheme = ({ view }) => {
 export const ChatWindowWrapper = styled.div<DataProps>`
   display: grid;
   grid-gap: 1rem;
-  height: 100%;
   overflow: hidden;
+  height: calc(100vh - 8rem);
   grid-template-areas:
     "ChatMain";
   @media ${breakpoint.device.xl} {

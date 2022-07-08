@@ -14,9 +14,8 @@ import { SIZES } from '@utils/styles/sizes';
 
 export const lightTheme: DefaultTheme = {
   textColor: '#222',
-  // background: '#f2f4f6',
-  // background: '#f1f5f9',
-  background: '#f2f5fa',
+  background: '#F7FAFC',
+  // background: '#f2f5fa',
   borderRadius: {
     ...BORDER_RADIUS,
   },

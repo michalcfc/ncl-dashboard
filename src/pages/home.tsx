@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 
-// utils
-import { COLORS } from '@utils/styles/colors';
-import { SPACING } from '@utils/styles/spacing';
-import { BOX_SHADOWS } from '@utils/styles/boxShadows';
-import { BORDER_RADIUS } from '@utils/styles/borderRadius';
-
 // components
 import { Grid } from '@components/ui/Grid';
-import { Box } from '@components/ui/Box';
-import { Text } from '@components/ui/Text';
-import { Link } from '@components/ui/Link';
 import { Heading } from '@components/ui/Heading';
 import { LoginForm } from '@components/auth/LoginForm';
-import { Image } from '@components/ui/Image';
+import { CardNews } from '@components/ui/Card/CardNews';
+import { CardThumb } from '@components/ui/Card/CardThumb';
+import { CardConversations } from '@components/ui/Card/CardConversations';
+import { CardRates } from '@components/ui/Card/CardRates';
+import { CardTotalEarnings } from '@components/ui/Card/CardTotalEarnings';
 
 const Home: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
@@ -24,81 +19,24 @@ const Home: React.FC = () => {
   return (
     <div>
       <Heading
-        mb={3}
+        mb={4}
         muted
         type="h4"
         text="Home page"
       />
       <Grid
-        gridGap={[2, 3]}
+        gridGap={[2, 4]}
         height="100%"
-        gridTemplateColumns="repeat(12,minmax(0,1fr))"
+        gridTemplateColumns={[
+          '1fr',
+          'repeat(12,1fr)',
+        ]}
       >
-        <Box
-          p={SPACING.lg}
-          gridColumn="span 12"
-          background={COLORS.white}
-          boxShadow={BOX_SHADOWS.default}
-          borderRadius={BORDER_RADIUS.default}
-        >
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="space-between"
-          >
-            <div>
-              <Heading
-                type="h1"
-                text="Hey, Don't forget to update your calendar"
-              />
-              <Text
-                muted
-                mt={SPACING.md}
-                text="Hurry up! Season 2022 is coming. "
-              />
-              <Link
-                type="button"
-                mt={SPACING.lg}
-                href="/calendar"
-                variant="success"
-                name="Update calendar"
-              />
-            </div>
-            <Box>
-              <Image
-                height="auto"
-                width="360px"
-                objectFit="cover"
-                src="/img/hero.svg"
-                alt="updated calendar"
-              />
-            </Box>
-          </Box>
-        </Box>
-        <Box
-          p={4}
-          gridColumn="span 6"
-          background={COLORS.white}
-          boxShadow={BOX_SHADOWS.default}
-          borderRadius={BORDER_RADIUS.default}
-        >
-          <Heading
-            type="h2"
-            text="Box 2"
-          />
-        </Box>
-        <Box
-          p={4}
-          gridColumn="span 6"
-          background={COLORS.white}
-          boxShadow={BOX_SHADOWS.default}
-          borderRadius={BORDER_RADIUS.default}
-        >
-          <Heading
-            type="h2"
-            text="Box 3"
-          />
-        </Box>
+        <CardThumb />
+        <CardTotalEarnings />
+        <CardNews />
+        <CardConversations />
+        <CardRates />
       </Grid>
     </div>
   );

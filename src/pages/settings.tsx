@@ -1,13 +1,17 @@
 import React from 'react';
-import { Heading } from '@components/ui/Heading';
-import { Grid } from '@components/ui/Grid';
+
+// component
 import { Box } from '@components/ui/Box';
-import { COLORS } from '@utils/styles/colors';
+import { Grid } from '@components/ui/Grid';
 import { Text } from '@components/ui/Text';
-import { FONT_WEIGHTS } from '@utils/styles/fontWeights';
-import { FONT_SIZES } from '@utils/styles/fontSizes';
 import { Switch } from '@components/ui/Switch';
+import { Heading } from '@components/ui/Heading';
+
+// utils
+import { COLORS } from '@utils/styles/colors';
 import { SPACING } from '@utils/styles/spacing';
+import { FONT_SIZES } from '@utils/styles/fontSizes';
+import { FONT_WEIGHTS } from '@utils/styles/fontWeights';
 
 const Settings: React.FC = () => (
   <>

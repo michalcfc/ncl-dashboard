@@ -13,8 +13,8 @@ const Chat: React.FC<ChatProps> = ({
   view = 'withAsides',
   conversations,
 }) => {
-  const [currentConversation, setCurrentConversation] = useState<number>(null);
   const [conversationData, setConversationData] = useState(null);
+  const [currentConversation, setCurrentConversation] = useState<number>(null);
 
   const { id } = useParams();
 
@@ -23,7 +23,6 @@ const Chat: React.FC<ChatProps> = ({
     setConversationData(getCurrentConversationId(conversations, currentConversation));
   }, [currentConversation]);
 
-  console.log(conversations);
   return (
     <ChatWindow
       view={view}

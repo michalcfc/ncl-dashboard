@@ -1,18 +1,25 @@
 import React from 'react';
-// import { Chat } from '@components/Chat';
 
 import { Heading } from '@components/ui/Heading';
-// import { reservations } from '../lib/data/db.json';
+import { useQuery } from 'react-query';
+import { fetchAPI } from '@lib/api';
 
-const ChatPage: React.FC = () => (
-  <>
-    <Heading type="h4" mb={3}>
-      Chat page
-    </Heading>
-    {/* <Chat */}
-    {/*  conversations={reservations.conversations} */}
-    {/* /> */}
-  </>
-);
+const ChatPage: React.FC = () => {
+  const { data } = useQuery('conversations', () => fetchAPI('inbox/539602/preview'));
+
+  console.log(data);
+
+  return (
+
+    <>
+      <Heading type="h4" mb={3}>
+        Chat page
+      </Heading>
+      {/* <Chat */}
+      {/*  conversations={reservations.conversations} */}
+      {/* /> */}
+    </>
+  );
+};
 
 export default ChatPage;
